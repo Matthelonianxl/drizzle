@@ -16,7 +16,9 @@
     "format": "prettier-standard 'src/**/*.js' 'test/**/*.js'",
     "lint": "eslint 'src/**/*.js'",
     "lint:fix": "eslint 'src/**/*.js' --fix",
-    "test": "jest --notify --silent"
+    "test": "jest --notify --silent",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "ethereum",
@@ -36,7 +38,8 @@
     "is-plain-object": "^2.0.4",
     "redux": "^4.0.1",
     "redux-saga": "^0.16.0",
-    "web3": "1.0.0-beta.35"
+    "web3": "1.0.0-beta.35",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -56,5 +59,6 @@
     "webpack-cli": "^3.3.1",
     "webpack-merge": "^4.2.1",
     "redux-mock-store": "^1.5.3"
-  }
+  },
+  "snyk": true
 }
